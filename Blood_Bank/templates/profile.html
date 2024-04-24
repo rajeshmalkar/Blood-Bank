@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+</head>
+<body>
+    <div class="container"> 
+        <h2>My Details</h2>
+        
+        <table border="2px">
+            <tr>
+                <th>Your Name</th>
+                <th>Email</th>
+                <th>Contact</th>
+                <th>Date of Birth</th>
+                <th>Address</th>
+                <th>Blood Group</th>
+            </tr>
+            
+            {% for x in data %}
+            <tr>
+                <td>{{x.name }}</td>
+                <td>{{x.user}}</td>
+                <td>{{x.contact}}</td>
+                <td>{{x.dob}}</td>
+                <td>{{x.address}}</td>
+                <td>{{x.blood_group}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <div>
+        <table border="2px">
+            <tr>
+                <th>Sr. No.</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Date</th>
+                <th>Reason</th>
+                <th>Age</th>
+                <th>Message</th>
+            </tr>
+            
+            {% for x in data1 %}
+            <tr>
+                <td>{{forloop.counter}}</td>
+                <td>{{x.name}}</td>
+                <td>{{x.email}}</td>
+                <td>{{x.phone}}</td>
+                <td>{{x.date}}</td>
+                <td>{{x.reason}}</td>
+                <td>{{x.age}}</td>
+                <td>{{x.message}}</td>
+                <td><a href="/cancel/{{x.id}}">Cancel</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

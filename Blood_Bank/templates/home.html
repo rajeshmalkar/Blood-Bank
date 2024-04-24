@@ -1,0 +1,297 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block 'main' %}
+
+<section id="about" class="about">
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="col-xl-5 col-lg-6 d-flex justify-content-center align-items-stretch position-relative">
+          <img src="{% static 'images/blood 1.jpg' %}" alt="" height="600px" width="600px">
+        </div>
+
+        <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+          <h3>About Bhavisya Blood Bank
+          </h3>
+          <p>The importance of maintaining your health and wellbeing throughout your lifetime by incorporating exercise, diet, preventative health checks, sleep management, managing mental health issues, finding ways to relax and unwind are all important aspects of our health and wellbeing.</p>
+
+          <div class="icon-box">
+            <div class="icon"></div>
+            <h4 class="title"><a href="">What does general health mean?</a></h4>
+            <p class="description">The state of health of the body as a whole, or of a community.</p>
+          </div>
+
+          <div class="icon-box">
+            <div class="icon"></div>
+            <h4 class="title"><a href="">What are the 5 types of health?</a></h4>
+            <p class="description">There are five main aspects of personal health: physical, emotional, social, spiritual, and intellectual.</p>
+          </div>
+
+          <div class="icon-box">
+            <div class="icon"></div>
+            <h4 class="title"><a href="">What is the importance of health?</a></h4>
+            <p class="description">Being healthy should be part of your overall lifestyle. Living a healthy lifestyle can help prevent chronic diseases and long-term illnesses.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!---------------------------------------Counts Section--------------------------------------------------------------->
+
+  <section id="counts" class="counts"> 
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-3">
+          <div class="count-box">
+            <i class="fas fa-user-md"></i>
+            <span>90</span>
+            <p>Doctors</p>
+          </div>
+
+        </div>
+        <div class="col-md-3">
+          <div class="count-box">
+            <i class="far fa-hospital"></i>
+            <span > 20</span>
+            <p>Departments</p>
+
+          </div>
+
+        </div>
+        <div class="col-md-3">
+          <div class="count-box">
+            <i class="fas fa-flask"></i>
+            <span >15</span>
+            <p>Research Labs</p>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="count-box">
+            <i class="fas fa-award"></i>
+            <span >150</span>
+            <p>Awards</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="services" class="services">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Services</h2>
+        <p>The healthcare system offers four broad types of services: health promotions, disease prevention, diagnosis and treatment, and rehabilitation.</p>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="icon-box">
+            <div class="icon"><i class="bi bi-heart-pulse-fill"></i></div>
+            <h4><a href="">Heart Prediction</a></h4>
+            <p>Heart Prediction, providing after logistic algo.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+          <div class="icon-box">
+            <div class="icon"><i class="bi bi-capsule"></i></div>
+            <h4><a href="">General Health Prediction</a></h4>
+            <p>Provoding a number of general health related problem after prediction.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+          <div class="icon-box">
+            <div class="icon"><i class="bi bi-hospital"></i></div>
+            <h4><a href="">Specialist Doctor</a></h4>
+            <p>Providing Specialist Doctor after a great verification team.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="icon-box">
+            <div class="icon"><i class="bi bi-fingerprint"></i></div>
+            <h4><a href="">Blood Donor</a></h4>
+            <p>Donate your blood as humanity in your Area.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="icon-box">
+            <div class="icon"><i class="bi bi-person-wheelchair"></i></div>
+            <h4><a href="">Request Blood</a></h4>
+            <p>Option for request for blood in your area.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="icon-box">
+            <div class="icon"><i class="bi bi-journal-medical"></i></div>
+            <h4><a href="">Bhavisya Blood Bank</a></h4>
+            <p>Used Classification Model for prediction</p>
+          </div>
+        </div>
+      </div>
+<!------------------------------------Appointment---------------------------------->
+      <section id="appointment" class="appointment">
+        <div class="container">
+  
+          <div class="section-title">
+            <h2>Make an Appointment  </h2>
+            <p>General health needs include health promotion, preventive care (immunization, general health screening), treatment of acute and chronic illness, and appropriate referral for more specialized needs where required.</p>
+          </div>
+  
+          <form action="" method="POST" class="app-form">
+            {% csrf_token %}
+            <div class=" row ">
+                <div class="form-group col-md-4">
+                  <input type="text" placeholder="Your Name" class="form-control" name="name">
+                </div>
+                <div class="form-group col-md-4">
+                  <input type="email" placeholder="Your Email" class="form-control" name="email" >
+                </div>
+                <div class="form-group col-md-4">
+                  <input type="number" placeholder="Your Phone" class="form-control" name="phone">
+                </div>
+
+            </div>
+            <div class="row">
+              <div class="form-group col-md-4">
+                <input type="date" name="date"  class="form-control" placeholder="Appointment Date">
+              </div>
+              <div class="form-group col-md-4">
+                <input type="text" name="reason" class="form-control" placeholder="Reason">
+              </div>
+              <div class="form-group col-md-4">
+                <input type="number" name="age" class="form-control" placeholder="Your Age">
+              </div>
+              <div class="form-group">
+                <textarea name="message"  rows="5" class="form-control" placeholder="Message (Optional)"></textarea>
+              </div>
+            </div>
+            <div>
+              <a href="/home"><button type="submit">Make an Appiontment</button></a>
+            </div>
+
+          </form>
+  
+        </div>
+      </section><!-- End Appointment Section -->
+
+      <!-------------------Doctors Section------------------------->
+
+      <section id="doctors" class="doctors">
+        <div class="container">
+
+          <div class="section-title">
+            <h2>Doctors</h2>
+            <p>General health needs include health promotion, preventive care (immunization, general health screening), treatment of acute and chronic illness, and approproate referral for more specialized needs where required. </p>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card" style="width: 100%;">
+                <div class="pic">
+                  <img src="{% static 'images/doctor5.jpg' %}" alt="" class="card-img-top" height="350px">
+                </div>
+                <div class="member-info"> 
+                  <h4>Walter White</h4>
+                  <span>Chief Medical Officer</span>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-skype"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="card" style="width: 100%;">
+                <div class="pic">
+                  <img src="{% static 'images/doctor2.jpg' %}" alt="" class="card-img-top" height="350px">
+                </div>
+                <div class="member-info"> 
+                  <h4>Walter White</h4>
+                  <span>Chief Medical Officer</span>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-skype"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="card" style="width: 100%;">
+                <div class="pic">
+                  <img src="{% static 'images/doctor3.jpg' %}" alt="" class="card-img-top" height="350px">
+                </div>
+                <div class="member-info"> 
+                  <h4>Walter White</h4>
+                  <span>Chief Medical Officer</span>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-skype"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="card" style="width: 100%;">
+                <div class="pic">
+                  <img src="{% static 'images/doctor4.jpg' %}" alt="" class="card-img-top" height="350px">
+                </div>
+                <div class="member-info"> 
+                  <h4>Walter White</h4>
+                  <span>Chief Medical Officer</span>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
+                </div>
+                <div class="social">
+                  <a href="#"><i class="bi bi-twitter-x"></i></a>
+                  <a href="#"><i class="bi bi-instagram"></i></a>
+                  <a href="#"><i class="bi bi-skype"></i></a>
+                  <a href="#"><i class="bi bi-linkedin"></i></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+      <hr>
+      
+    
+
+    
+
+    </div>
+
+  </section>
+
+{% endblock 'main' %}
